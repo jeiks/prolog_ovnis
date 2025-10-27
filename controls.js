@@ -64,7 +64,7 @@ class Controls{
         );
     }
 
-    updateDUMMYKeys(sensors) {
+    updateDUMMYKeys(sensors, sensorsType) {
         if ((Date.now() - this.lastUpdate) < 1000)
             return;
         else{
@@ -90,7 +90,10 @@ class Controls{
             // console.log('R:'+this.right+', L:'+this.left+', F:'+this.forward+', R:'+this.reverse);
         }
         if (sensors[5] != undefined){
-            if (sensors[5] > .3)
+            if (sensors[5] > .4 && sensorsType[5] == 2 ||
+                sensors[4] > .4 && sensorsType[4] == 2 ||
+                sensors[3] > .4 && sensorsType[3] == 2
+            )
                 this.boom = true;
             if (sensors[5] > .8) {
                 this.forward = false;

@@ -97,7 +97,7 @@ class Agent{
                                                this.shieldStrength, repairZone.x, repairZone.y);
                     break;
                 case "DUMMY":
-                    this.controls.updateDUMMYKeys(this.getSensors());
+                    this.controls.updateDUMMYKeys(this.getSensors(), this.getSensorsType());
                     break;
                 case "KEYS":
                     // Para debugar:
