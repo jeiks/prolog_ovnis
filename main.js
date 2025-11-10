@@ -116,8 +116,8 @@ function updateScoresDiv(scores) {
 $('#kmdiv').toggle();
 updateScoresDiv(getScores());
 document.addEventListener("keydown",function(event) {
-    switch(event.key){
-        case "s":
+    switch(event.key.toUpperCase()){
+        case "S":
             $('#kmdiv').toggle();
             break;
     }
