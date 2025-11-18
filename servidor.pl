@@ -70,7 +70,7 @@ action(Request) :-
                       st9(ST9, [integer]),
                       st10(ST10, [integer]),
                       % vida:
-                      score(SCORE, [integer]),
+                      score(SCORE, [float]),
                       % velocidade:
                       speed(SPEED, [float]),
                       % força do escudo:
