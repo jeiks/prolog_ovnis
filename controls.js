@@ -7,6 +7,7 @@ class Controls{
         this.boom=false;
         this.timeForUpdateProlog=timeForUpdateProlog
         this.lastUpdate=Date.now();
+        this.lastMSG = '';
 
         switch(type){
             case "KEYS":
@@ -32,9 +33,14 @@ class Controls{
         this.right = (controls.right)?true:false;
         this.boom = (controls.boom)?true:false;
         let msg = controls.msg;
-        // console.log(msg);
-        //console.log('forward: '+this.forward+' ('+controls.forward+') -- reverse: '+this.reverse+' ('+controls.reverse+') -- '+
-        //            'left: '+this.left+' ('+controls.left+') -- right: '+this.right+' ('+controls.right+')'+this.boom+' ('+controls.boom+')')
+        if (msg !== this.lastMSG)
+        //msg = 'forward: '+this.forward+' ('+controls.forward+') -- reverse: '+this.reverse+' ('+controls.reverse+') -- '+
+        //      'left: '+this.left+' ('+controls.left+') -- right: '+this.right+' ('+controls.right+')'+this.boom+' ('+controls.boom+')';
+        {
+            this.lastMSG = msg;
+            //Descomente aqui para ver as mensagens:
+            //console.log(msg);
+        }
     }
 
     updateProlog(sensors, sensorsType, x, y, angle, prologID, score, speed, shieldStrength, x_oficina, y_oficina) {
@@ -154,3 +160,4 @@ class Controls{
         });
     }
 }
+
