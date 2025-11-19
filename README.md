@@ -117,11 +117,11 @@ showSensorsOfDummyAgents = true; //modifique (true OU false) para mostrar ou nã
 ```
 
 Além disso, os ovnis podem retornar mensagens ao cliente web. Elas podem ser apresentadas no console do navegador.
-Para isso, preencha corretamente a variável ``MSG`` do script em Prolog do agente e descomente a linha ``35`` do ``controls.js``:
+Para isso, preencha corretamente a variável ``MSG`` do script em Prolog do agente e descomente a linha ``42`` do ``controls.js``:
 ```js
 console.log(msg);
 ``` 
-Também existem mensagens de debug nas linhas ``36 e 37``, ``60``, ``90``.
+Também existe outra opção de mensagem na linha ``36``, e outras mensagens de debug nas linhas ``66``, ``96``.
 
 E sobre os sensores, aqui estão seus números (posições do vetor) e também o valor do ângulo do ovni:
 
